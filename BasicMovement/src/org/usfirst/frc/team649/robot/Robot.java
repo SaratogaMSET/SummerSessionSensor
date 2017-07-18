@@ -88,13 +88,13 @@ public class Robot extends IterativeRobot {
 		Scheduler.getInstance().run();
 		
 		// ************* modify for joystick use
-		new DriveCommand(0, 0).start();
+		new DriveCommand(0, 0).start();	// For more information about this command, see DriveCommand.java
 		
 		// ************* Gets right joystick
-		oi.driver.getRight();
+		oi.driver.getRight();	// See what this does in OI.java
 		
 		// ************* Gets left joystick
-		oi.driver.getLeft();
+		oi.driver.getLeft();	// See what this does in OI.java
 	}
 
 	/**

@@ -10,8 +10,8 @@ import edu.wpi.first.wpilibj.command.Command;
 public class DriveCommand extends Command {
 	
 			
-	double left;
-	double right;
+	double left;	// Left joystick y value
+	double right;	// Right joystick y value
     public DriveCommand(double left, double right) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
