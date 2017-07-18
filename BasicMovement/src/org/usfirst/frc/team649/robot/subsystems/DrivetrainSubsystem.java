@@ -13,7 +13,7 @@ public class DrivetrainSubsystem extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	public Victor[] motors;
-	public final static double speedLimit = 0.5;
+	public final static double speedLimit = 0.4;
 	
     public DrivetrainSubsystem() {
     	motors = new Victor[4];
@@ -27,8 +27,8 @@ public class DrivetrainSubsystem extends Subsystem {
     	power = power * speedLimit;
     	motors[0].set(power);
     	motors[1].set(power);
-    	motors[2].set(-power);
-    	motors[3].set(-power);
+    	motors[2].set(-power);	// Negative because this motor runs in opposite direction
+    	motors[3].set(-power);	// Negative because this motor runs in opposite direction
     }
     
     // ************************************** Write Tank Drive here! Remember to limit the speed
