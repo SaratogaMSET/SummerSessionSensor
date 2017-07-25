@@ -1,1 +1,1 @@
-# BasicMovementSummerTraining
+# Basic Sensor Summer Training
