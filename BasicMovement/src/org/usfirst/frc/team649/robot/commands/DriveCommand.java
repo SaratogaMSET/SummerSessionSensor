@@ -22,10 +22,7 @@ public class DriveCommand extends Command {
     
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.drive.straightDrive(right); // Remember to remove after you write your function
-    	// *************************************** Rewrite with your tank drive method. 
-    	
-    	
+    	Robot.drive.straightDrive(right); // Remember to remove after you write your function 
     }
 
     // Called repeatedly when this Command is scheduled to run

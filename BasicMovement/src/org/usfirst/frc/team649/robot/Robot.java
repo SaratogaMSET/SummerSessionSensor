@@ -1,6 +1,8 @@
 
 package org.usfirst.frc.team649.robot;
 
+// ***** This is where we add import statements which allow 
+// ***** us to use different parts of the WPI libraries
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -12,6 +14,7 @@ import org.usfirst.frc.team649.robot.commands.DriveForTime;
 import org.usfirst.frc.team649.robot.commands.DriveCommand;
 import org.usfirst.frc.team649.robot.subsystems.DrivetrainSubsystem;
 
+
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the IterativeRobot
@@ -21,8 +24,11 @@ import org.usfirst.frc.team649.robot.subsystems.DrivetrainSubsystem;
  */
 public class Robot extends IterativeRobot {
 
+	// ***** This is where we declare different objects such 
+	// ***** as drivetrains, sensors, OI, etc.  
 	public static DrivetrainSubsystem drive;
 	public static OI oi;
+	
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -30,6 +36,8 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
+		// ***** This is where we initialize the different 
+		// ***** parts of the robot which we declared earlier
 		oi = new OI();
 		drive = new DrivetrainSubsystem();
 		// chooser.addObject("My Auto", new MyAutoCommand());
@@ -63,8 +71,6 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousInit() {
-		//*********************** Write Auto Program here!
-		
 	}
 
 	/**
@@ -77,7 +83,6 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void teleopInit() {
-		
 	}
 
 	/**
@@ -87,14 +92,8 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		
-		// ************* modify for joystick use
+		// ************* modify for sensor use
 		new DriveCommand(0, 0).start();	// For more information about this command, see DriveCommand.java
-		
-		// ************* Gets right joystick
-		oi.driver.getRight();	// See what this does in OI.java
-		
-		// ************* Gets left joystick
-		oi.driver.getLeft();	// See what this does in OI.java
 	}
 
 	/**
