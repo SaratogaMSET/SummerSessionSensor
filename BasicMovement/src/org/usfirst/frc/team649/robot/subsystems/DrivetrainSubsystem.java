@@ -22,7 +22,6 @@ public class DrivetrainSubsystem extends Subsystem {
     	}
     }
     
-    
     public void straightDrive(double power) {
     	power = power * speedLimit;
     	motors[0].set(power);
@@ -30,9 +29,6 @@ public class DrivetrainSubsystem extends Subsystem {
     	motors[2].set(-power);	// Negative because this motor runs in opposite direction
     	motors[3].set(-power);	// Negative because this motor runs in opposite direction
     }
-    
-    // ************************************** Write Tank Drive here! Remember to limit the speed
-    
     
 	public void initDefaultCommand() {
         // Set the default command for a subsystem here.

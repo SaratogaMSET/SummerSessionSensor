@@ -40,7 +40,6 @@ public class Robot extends IterativeRobot {
 		// ***** parts of the robot which we declared earlier
 		oi = new OI();
 		drive = new DrivetrainSubsystem();
-		// chooser.addObject("My Auto", new MyAutoCommand());
 	}
 
 	/**
@@ -92,8 +91,8 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		
-		// ************* modify for sensor use
-		new DriveCommand(0, 0).start();	// For more information about this command, see DriveCommand.java
+		// ***** Modify for sensor use
+		new DriveCommand(0).start();	// For more information about this command, see DriveCommand.java
 	}
 
 	/**

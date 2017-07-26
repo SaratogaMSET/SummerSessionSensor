@@ -10,19 +10,17 @@ import edu.wpi.first.wpilibj.command.Command;
 public class DriveCommand extends Command {
 	
 			
-	double left;	// Left joystick y value
-	double right;	// Right joystick y value
-    public DriveCommand(double left, double right) {
+	double power;	// Power value
+    public DriveCommand(double power) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires(Robot.drive);
-    	this.right = right;
-    	this.left = left;
+    	this.power = power;
     }
     
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.drive.straightDrive(right); // Remember to remove after you write your function 
+    	Robot.drive.straightDrive(power); 
     }
 
     // Called repeatedly when this Command is scheduled to run
