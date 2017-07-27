@@ -3,9 +3,9 @@ package org.usfirst.frc.team649.robot;
 
 // ***** This is where we add import statements which allow 
 // ***** us to use different parts of the WPI libraries
-import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj.AnalogPotentiometer;
-import edu.wpi.first.wpilibj.AnalogInput;
+import edu.wpi.first.wpilibj.DigitalInput; //
+import edu.wpi.first.wpilibj.AnalogPotentiometer; //
+import edu.wpi.first.wpilibj.AnalogInput; //
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -31,9 +31,9 @@ public class Robot extends IterativeRobot {
 	// ***** as drivetrains, sensors, OI, etc.  
 	public static DrivetrainSubsystem drive;
 	public static OI oi;
-	DigitalInput limitSwitch;
-	AnalogPotentiometer pot;
-	AnalogInput ai;
+	DigitalInput limitSwitch; //
+	AnalogPotentiometer pot; //
+	AnalogInput ai; //
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -45,9 +45,9 @@ public class Robot extends IterativeRobot {
 		// ***** parts of the robot which we declared earlier
 		oi = new OI();
 		drive = new DrivetrainSubsystem();
-		limitSwitch = new DigitalInput(2);
-		ai = new AnalogInput(1);
-		pot = new AnalogPotentiometer(ai, 2, -1);
+		limitSwitch = new DigitalInput(2); //
+		ai = new AnalogInput(1); //
+		pot = new AnalogPotentiometer(ai, 2, -1); //
 	}
 
 	/**
@@ -100,10 +100,10 @@ public class Robot extends IterativeRobot {
 		Scheduler.getInstance().run();
 		
 		// ***** Modify for sensor use
-		double driveValLim = 0;
-		if(!limitSwitch.get())
-			driveValLim = 1;
-		double driveValAn = pot.get();
+		double driveValLim = 0;//
+		if(!limitSwitch.get())//
+			driveValLim = 1;//
+		double driveValAn = pot.get(); //
 		new DriveCommand(driveValAn).start();	// For more information about this command, see DriveCommand.java
 	}
 
